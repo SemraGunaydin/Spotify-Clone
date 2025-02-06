@@ -121,6 +121,10 @@ main {
                             scale: 1.1;
                             rotate: 360deg;
                         }
+                        i {
+                            // play buttonunu ve icerisindeki icon'a beraber tiklanildiginda istedigimiz tikkalnmanin gerceklesmesi icin  pointer-events'i none olarak ayarladik.
+                            pointer-events: none;
+                        }
 
                     }
                 }
@@ -133,4 +137,49 @@ main {
             }
         }
     }
+
 }
+
+
+footer {
+  background-color: black;
+  color: $textColor;
+  margin-top: 50px;
+  padding: 40px 10px;
+
+  .footer-c {
+    display: grid;
+    grid-template-columns: 60% 20% 20%;
+    gap: 16px;
+  }
+
+  .footer-box {
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 128px;
+    }
+    .social {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      i {
+        background-color: black;
+        font-size: 20px;
+        padding: 10px;
+        color: $textColor;
+        border-radius: 50%;
+      }
+    }
+    a {
+      color: $textColor;
+      padding-top: 30px;
+      white-space: nowrap;
+    }
+  }
+
+  .copyright {
+    margin-top: 30px;
+  }
+}
+

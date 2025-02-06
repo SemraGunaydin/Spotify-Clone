@@ -169,11 +169,107 @@ main section .list .card figure .play:hover {
   scale: 1.1;
   rotate: 360deg;
 }
+main section .list .card figure .play i {
+  pointer-events: none;
+}
 main section .list .card .card-info {
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+footer {
+  background-color: black;
+  color: rgba(255, 255, 255, 0.78);
+  margin-top: 50px;
+  padding: 40px 10px;
+}
+footer .footer-c {
+  display: grid;
+  grid-template-columns: 60% 20% 20%;
+  gap: 16px;
+}
+footer .footer-box {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-box h2 {
+  font-size: 128px;
+}
+footer .footer-box .social {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+}
+footer .footer-box .social i {
+  background-color: black;
+  font-size: 20px;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.78);
+  border-radius: 50%;
+}
+footer .footer-box a {
+  color: rgba(255, 255, 255, 0.78);
+  padding-top: 30px;
+  white-space: nowrap;
+}
+footer .copyright {
+  margin-top: 30px;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.player .info {
+  display: flex;
+  gap: 10px;
+}
+.player .info img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.player .info div h5 {
+  font-size: 18px;
+  font-weight: 500;
+}
+.player .info div p {
+  color: rgb(150, 150, 150);
+}
+.player audio {
+  width: 40%;
+}
+.player .icons {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.player .icons:hover {
+  color: #1db954;
+}
+@media (max-width: 992px) {
+  .player .icons {
+    display: none;
+  }
+}
+
+@keyframes turn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate {
+  animation: turn 4s infinite linear;
 }
 
 * {
@@ -203,4 +299,97 @@ body {
   display: flex;
   gap: 20px;
   height: calc(100vh - 120px);
+}
+
+/* From Uiverse.io by alexruix */
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  --cell-size: 52px;
+  --cell-spacing: 1px;
+  --cells: 3;
+  --total-size: calc(var(--cells) * (var(--cell-size) + 2 * var(--cell-spacing)));
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--total-size);
+  height: var(--total-size);
+}
+
+.cell {
+  flex: 0 0 var(--cell-size);
+  margin: var(--cell-spacing);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 4px;
+  animation: 1.5s ripple ease infinite;
+}
+
+.cell.d-1 {
+  animation-delay: 100ms;
+}
+
+.cell.d-2 {
+  animation-delay: 200ms;
+}
+
+.cell.d-3 {
+  animation-delay: 300ms;
+}
+
+.cell.d-4 {
+  animation-delay: 400ms;
+}
+
+.cell:nth-child(1) {
+  --cell-color: #00FF87;
+}
+
+.cell:nth-child(2) {
+  --cell-color: #0CFD95;
+}
+
+.cell:nth-child(3) {
+  --cell-color: #17FBA2;
+}
+
+.cell:nth-child(4) {
+  --cell-color: #23F9B2;
+}
+
+.cell:nth-child(5) {
+  --cell-color: #30F7C3;
+}
+
+.cell:nth-child(6) {
+  --cell-color: #3DF5D4;
+}
+
+.cell:nth-child(7) {
+  --cell-color: #45F4DE;
+}
+
+.cell:nth-child(8) {
+  --cell-color: #53F1F0;
+}
+
+.cell:nth-child(9) {
+  --cell-color: #60EFFF;
+}
+
+/*Animation*/
+@keyframes ripple {
+  0% {
+    background-color: transparent;
+  }
+  30% {
+    background-color: var(--cell-color);
+  }
+  60% {
+    background-color: transparent;
+  }
+  100% {
+    background-color: transparent;
+  }
 }/*# sourceMappingURL=style.css.map */

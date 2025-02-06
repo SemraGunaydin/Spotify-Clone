@@ -26,7 +26,7 @@ Built using modern web technologies, this project aims to provide a seamless and
 
 
 
-📧 Contact
+# 📧 Contact
 semra.gunaydinwork@outlook.com
 
-Enjoy your music 🎼🎧📻🎹🎙️🎶
+# Enjoy your music 🎼🎧📻🎹🎙️🎶
